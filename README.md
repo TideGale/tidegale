@@ -16,6 +16,8 @@ V4L2 采集、环形缓冲、三线程解耦、HTTP MJPEG 推流、framebuffer �
 
 STM32F103 上自写的 Bootloader：元数据 magic + CRC 双校验、选中槽校验、trial 试启动、连续三次失败自动回滚。CRC32 用标准向量验证（`123456789` → `0xCBF43926`）。
 
+v1.0 已收尾：A→B→A 双镜像闭环、坏包连续三次回滚、MQTT 远程开锁，三项都实测通过。
+
 ## 作品集
 
 https://tidegale.github.io/ — 两个项目的实现细节、实测数据和没做完的部分
