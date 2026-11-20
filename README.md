@@ -7,12 +7,14 @@
 ## 项目
 
 ### RK3568 视频采集与推流终端
-[仓库](https://github.com/TideGale/rk3568-video-stream) · [发布页](https://github.com/TideGale/rk3568-video-stream/releases/tag/v0.1.0)
+[仓库](https://github.com/TideGale/rk3568-video-stream) · [发布页](https://github.com/TideGale/rk3568-video-stream/releases/tag/v2.1-tts)
 
 V4L2 采集、环形缓冲、三线程解耦、HTTP MJPEG 推流、framebuffer 本地预览。实测 15.1fps 且定位到是摄像头固件锁定（七步排查），连续 32.8 分钟推流 0 丢帧，393 个采样点内存无增长。
 
+v2.0 加了语音层：常开录音（ALSA，门限 900 才落盘）→ 云端 ASR → 语音触发抓帧 → 多模态回答 → TTS 念出来。端侧只做数据通路，本地模型跑不动（A55 四核），这是主动取舍。
+
 ### 智能门锁 · A/B 双分区 OTA
-[仓库](https://github.com/TideGale/stm32-smart-lock-ota) · [发布页](https://github.com/TideGale/stm32-smart-lock-ota/releases/tag/v0.1.0)
+[仓库](https://github.com/TideGale/stm32-smart-lock-ota) · [发布页](https://github.com/TideGale/stm32-smart-lock-ota/releases/tag/v2.1-tts)
 
 STM32F103 上自写的 Bootloader：元数据 magic + CRC 双校验、选中槽校验、trial 试启动、连续三次失败自动回滚。CRC32 用标准向量验证（`123456789` → `0xCBF43926`）。
 
